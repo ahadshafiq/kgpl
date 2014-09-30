@@ -1,0 +1,71 @@
+// Grid System
+@import "../settings/settings";
+
+// Main Container
+.container-grid{
+	width: 95%;
+	margin: 0 auto;
+}
+// The Columns
+[class^="col-"]{
+	float: left;
+	padding: 0 $gutter;
+}
+// The Row
+.row{
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+	&:after{
+		content:"";
+		display: table;
+		clear: both;
+	}
+}
+
+// Columns Widths
+@for $i from 1 through $column-count{
+	.col-#{$i}{
+		width: ( 100 / $column-count ) * $i *1%;
+	}
+}
+
+// Special Classes
+.col-third{
+	width: (100 / 3) * 1%;
+}
+
+.col-two-thirds{
+	width: ( 100 / 3 ) * 2%;
+}
+
+.col-half{
+	width: ( 100 / 2 ) * 1%;
+}
+
+.col-quarter{
+	width: ( 100 / 4) * 4%;
+}
+// Images inside grid system must be responsive. This will prevent images leaking outside of your viewport
+img{
+	max-width: 100%; /* Refers to the parent of the image */
+	height: auto;
+}
+// Responsive behaviour
+@media(max-width:1024px){
+	[class^="col-"]{
+		padding: 0 $gutter / 2;
+	}
+	.row{
+		margin-left: -$gutter/2;
+		margin-right: -$gutter/2;
+	}
+}
+// Mobile Sizes: make all columns stack on top of each other
+@media(max-width:768px){
+	[class^="col-"]{
+		width: 100%;
+	}
+}
+
+
+

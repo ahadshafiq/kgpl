@@ -1,0 +1,156 @@
+@import "../settings/settings";
+
+
+// Navigation and Content Wrap
+
+/* Menu Button */
+.menu-button {
+	position: fixed;
+	z-index: 1000;
+	margin: 1em;
+	padding: 0;
+	width: 2.5em;
+	height: 2.25em;
+	border: none;
+	text-indent: 2.5em;
+	font-size: 1.5em;
+	color: transparent;
+	background: transparent;
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+
+	&:before{
+		position: absolute;
+		top: 0.5em;
+		right: 0.5em;
+		bottom: 0.5em;
+		left: 0.5em;
+		background: linear-gradient(#3fc4e0 20%, transparent 20%, transparent 40%, #3fc4e0 40%, #3fc4e0 60%, transparent 60%, transparent 80%, #3fc4e0 80%);
+		content: '';
+	}
+
+	&:hover{
+		opacity: 0.6;
+	}
+}
+
+/* Menu */
+.menu-wrap {
+	position: absolute;
+	font-weight: 700;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	a{
+		color: #b8b7ad;
+	}
+	&:hover, &:focus{
+		color: #3fc4e0;
+	}
+	.menu-top {
+		line-height: 58px;
+
+		.profile{
+			display: inline-block;
+			padding: 8px 10px;
+			line-height: 42px;
+			width: 300px;
+			img{
+				float: left;
+				margin-right: 1em;
+			}
+		}
+		
+		.icon-list{
+			display: inline-block;
+			font-size: 1.25em;
+			
+			a{
+				margin: 0 1em 0em 0;
+				padding: 0;
+			}
+		}
+		@media(max-width: 32em){
+			padding-left: 1em;
+		}
+
+	}
+	.menu-side{
+		width: 300px;
+		a{
+			display: block;
+			padding: 1.2em;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			&:first-child{
+				border-top: 1px solid rgba(0,0,0,0.1);
+			}
+			&:hover{
+				border-left: 4px solid #3fc4e0;
+				border-radius: 6px; 
+			}
+		}
+		i{
+			margin-right: 1em;
+		}
+
+	}
+}
+
+.show-menu {
+	.menu-wrap {
+		opacity: 1;
+	}
+	.content-wrap, .menu-button{
+		-webkit-transform: translate3d(300px,60px,0);
+		transform: translate3d(300px,60px,0);
+	}
+	.conent:before{
+		opacity: 1;
+		-webkit-transition: opacity 0.1s;
+		transition: opacity 0.1s;
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+}
+
+/* Content Wrap */
+html, body, .container, .content-wrap {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	background: #373a47;
+}
+
+
+.content-wrap {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+}
+
+.content {
+	position: relative;	
+	background: lighten(#373a47, 30%);
+    &:before{
+    	position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.3);
+		content: '';
+		opacity: 0;
+		-webkit-transform: translate3d(100%,0,0);
+		transform: translate3d(100%,0,0);
+		-webkit-transition: opacity 0.1s, -webkit-transform 0s 0.1s;
+		transition: opacity 0.1s, transform 0s 0.1s;
+    }
+}
+
+
+

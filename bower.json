@@ -1,0 +1,9 @@
+{
+  "name": "kgpl",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "font-awesome": "~4.2.0",
+    "classie": "~1.0.1"
+  }
+}
