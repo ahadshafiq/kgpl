@@ -3,7 +3,7 @@
 This document will describe the structure of each pattern and its behaviour under various screen sizes.
 It includes code playground snippets to help with experimenting.
 # Hosting: 
-The page is deployed here on heroku: http://kgpatternlibrary.herokuapp.com/
+The page is deployed here on heroku: http://kgpl.herokuapp.com/
 -------------------------------------------------------------------------------
 ## SASS Code Structure
 <pre>
