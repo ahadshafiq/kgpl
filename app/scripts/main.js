@@ -1,13 +1,4 @@
 'use strict';
-// $(function () {
-//     $('.menu-side').on('click', 'a', function () {
-//        if($(this).closest('i').hasClass('current')) return; $('.current').not($(this).closest('i').addClass('current')).removeClass('current');
-//         // fade out all open subcontents
-//         $('.pbox:visible').hide(0);
-//         // fade in new selected subcontent
-//         $('.pbox[id=' + $(this).attr('data-id') + ']').show(0);
-//     }).find('a:first').click();
-// });
 $(document).ready( function() {
      $('#loadNav').on('click', function() {
         $('#explanation').load('../pages/theNavigation.html');
@@ -33,13 +24,19 @@ $(document).ready( function() {
     $('#loadAnimations').on('click', function() {
         $('#explanation').load('../pages/theAnimations.html');
     });
-    $('#loadTabs').on('click', function() {
-        $('#explanation').load('../pages/theTabs.html');
+    $('#loadCharts').on('click', function() {
+        $('#explanation').load('../pages/theCharts.html');
     });
-    $('#loadCar').on('click', function() {
-        $('#explanation').load('../pages/theCarousel.html');
+
+    // Button Animations
+    $('#demo-animations').find('.demo-col').on('click', function() {
+        var $this = $(this);
+        $this.addClass('animated ' + $this.text());
     });
+
 });
 
+
+        
 
                     

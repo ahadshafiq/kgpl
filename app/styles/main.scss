@@ -20,19 +20,19 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 
 
 // /* Typography */
-// @import "basic/typography";
+@import "basic/typography";
 
 // /* Buttons */
-// @import "basic/buttons";
+@import "basic/buttons";
 
-// /* Forms */
-// @import "basic/forms";
+/* Forms */
+@import "basic/forms";
 
 // /* Icons */
-// @import "basic/icons";
+// @import "basic/icons"; //disabled only for presentation as nav clashes.
 
-// /* Feedback */
-// @import "basic/feedback";
+// Feedback
+@import "basic/feedback";
 
 
 // /**
@@ -44,14 +44,7 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 /* Navigation */
 @import "advanced/navigation";
 
-// /* Tabs */
-// @import "advanced/tabs";
 
-// /* Accordions */
-// @import "advanced/accordions";
-
-// /* Carousels */
-// @import "advanced/carousels";
 
 // /**
 //  * ----------------------------------------------------------------------------------------
