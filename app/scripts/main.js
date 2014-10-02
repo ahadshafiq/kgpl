@@ -1,7 +1,10 @@
 'use strict';
 $(document).ready( function() {
     $('#explanation').load('../pages/theBlankSlate.html');
-    
+    $('#loadHome').on('click', function() {
+        $('#explanation').load('../pages/theBlankSlate.html');
+    });
+
     $('#loadNav').on('click', function() {
         $('#explanation').load('../pages/theNavigation.html');
     });
