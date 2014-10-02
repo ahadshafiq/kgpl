@@ -1,6 +1,8 @@
 'use strict';
 $(document).ready( function() {
-     $('#loadNav').on('click', function() {
+    $('#explanation').load('../pages/theBlankSlate.html');
+    
+    $('#loadNav').on('click', function() {
         $('#explanation').load('../pages/theNavigation.html');
     });
      $('#loadGrid').on('click', function() {
