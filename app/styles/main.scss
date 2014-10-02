@@ -1,7 +1,5 @@
 /* Font Awesome. */
 
-$fa-font-path: "../bower_components/font-awesome/fonts/";
-@import "../bower_components/font-awesome/scss/font-awesome";
 
 // bower:scss
 // endbower
@@ -14,11 +12,6 @@ $fa-font-path: "../bower_components/font-awesome/fonts/";
 
 /* Normalize.css */
 @import "basic/normalize";
-
-/* Font Awesome. */
-$fa-font-path: "../bower_components/font-awesome/fonts/";
-@import "../bower_components/font-awesome/scss/font-awesome";
-
 
 // /* The Grid System */
 @import "basic/grid";
